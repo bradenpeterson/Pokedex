@@ -281,7 +281,7 @@ Build a comprehensive Pokedex application using Next.js 16 App Router and PokeAP
 ### Phase 7: Page Routes - Detail Pages
 
 #### Step 7.1: Pokemon Detail Page
-- [ ] Create `app/pokemon/[name]/page.tsx`:
+- [x] Create `app/pokemon/[name]/page.tsx`:
   - Server Component
   - Extract `name` from route params (decode URL if needed for special characters)
   - Fetch Pokemon detail using `getPokemonByName(name)`
@@ -291,13 +291,13 @@ Build a comprehensive Pokedex application using Next.js 16 App Router and PokeAP
   - Add BackButton component at top with fallback to `/pokemon`
   - Handle not found errors using `notFound()` from `next/navigation` (triggers not-found.tsx)
   - Set appropriate metadata with Pokemon name
-- [ ] Create `app/pokemon/[name]/not-found.tsx`:
+- [x] Create `app/pokemon/[name]/not-found.tsx`:
   - Custom 404 page for Pokemon not found
   - Show friendly error message
   - Include link back to Pokemon list
 
 #### Step 7.2: Location Detail Page
-- [ ] Create `app/locations/[name]/page.tsx`:
+- [x] Create `app/locations/[name]/page.tsx`:
   - Server Component
   - Extract `name` from route params (decode URL if needed)
   - Fetch location detail using `getLocationByName(name)`
@@ -307,13 +307,13 @@ Build a comprehensive Pokedex application using Next.js 16 App Router and PokeAP
   - Add BackButton component at top with fallback to `/locations`
   - Handle not found errors using `notFound()` from `next/navigation`
   - Set appropriate metadata with location name
-- [ ] Create `app/locations/[name]/not-found.tsx`:
+- [x] Create `app/locations/[name]/not-found.tsx`:
   - Custom 404 page for location not found
   - Show friendly error message
   - Include link back to locations list
 
 #### Step 7.3: Move Detail Page
-- [ ] Create `app/moves/[name]/page.tsx`:
+- [x] Create `app/moves/[name]/page.tsx`:
   - Server Component
   - Extract `name` from route params (decode URL if needed)
   - Fetch move detail using `getMoveByName(name)`
@@ -321,13 +321,13 @@ Build a comprehensive Pokedex application using Next.js 16 App Router and PokeAP
   - Add BackButton component at top with fallback to `/moves`
   - Handle not found errors using `notFound()` from `next/navigation`
   - Set appropriate metadata with move name
-- [ ] Create `app/moves/[name]/not-found.tsx`:
+- [x] Create `app/moves/[name]/not-found.tsx`:
   - Custom 404 page for move not found
   - Show friendly error message
   - Include link back to moves list
 
 #### Step 7.4: Generation Detail Page
-- [ ] Create `app/generations/[name]/page.tsx`:
+- [x] Create `app/generations/[name]/page.tsx`:
   - Server Component
   - Extract `name` from route params (decode URL if needed)
   - Fetch generation detail using `getGenerationByName(name)`
@@ -335,7 +335,7 @@ Build a comprehensive Pokedex application using Next.js 16 App Router and PokeAP
   - Add BackButton component at top with fallback to `/generations`
   - Handle not found errors using `notFound()` from `next/navigation`
   - Set appropriate metadata with formatted generation name
-- [ ] Create `app/generations/[name]/not-found.tsx`:
+- [x] Create `app/generations/[name]/not-found.tsx`:
   - Custom 404 page for generation not found
   - Show friendly error message
   - Include link back to generations list
