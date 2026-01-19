@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { getAllGenerations } from '@/lib/api/generations';
-import { GenerationList } from '@/components/ui/GenerationList';
+import { GenerationListWithError } from '@/components/ui/GenerationListWithError';
 import { GenerationListItem } from '@/lib/types/generations';
 
 export const metadata: Metadata = {
@@ -18,19 +18,10 @@ export default async function GenerationsListPage() {
     error = err instanceof Error ? err.message : 'Failed to load generations';
   }
 
-  if (error) {
-    return (
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-red-200 dark:border-red-800">
-        <h1 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Generations</h1>
-        <p className="text-red-600 dark:text-red-400">Error: {error}</p>
-      </div>
-    );
-  }
-
   return (
     <div>
       <h1 className="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100">Generations</h1>
-      <GenerationList items={generations} />
+      <GenerationListWithError initialGenerations={generations} initialError={error} />
     </div>
   );
 }

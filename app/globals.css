@@ -63,12 +63,20 @@ html {
 
 /* Focus visible styles for accessibility */
 *:focus-visible {
-  outline: 2px solid theme(colors.blue.500);
+  outline: 2px solid #3b82f6; /* blue-500 */
   outline-offset: 2px;
 }
 
 /* Ensure minimum touch target sizes */
-a, button {
+button {
   min-height: 44px;
   min-width: 44px;
+}
+
+a {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

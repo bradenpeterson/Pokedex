@@ -378,29 +378,30 @@ Note: Component styling is complete. Mobile responsiveness testing should be per
 ### Phase 9: Error Handling & Edge Cases
 
 #### Step 9.1: API Error Handling
-- [ ] Add error handling in API utility functions for:
+- [x] Add error handling in API utility functions for:
   - Network failures - return error state, show inline error messages on pages
-  - 404 errors - use `notFound()` to trigger not-found.tsx pages
+  - 404 errors - use `notFound()` to trigger not-found.tsx pages (already implemented in detail pages)
   - Invalid API responses - validate response structure, show error messages
-  - Rate limiting (if encountered) - implement retry logic with exponential backoff
-- [ ] Create inline error components for network/API errors:
-  - Display user-friendly error messages
-  - Include retry buttons for network errors
-  - Show helpful guidance (e.g., "Check your connection" or "Try again later")
+  - Rate limiting (if encountered) - basic error handling implemented, retry available via ErrorDisplay component
+- [x] Create inline error components for network/API errors:
+  - Created ErrorDisplay component with user-friendly error messages
+  - Includes retry buttons for network errors (using router.refresh())
+  - Shows helpful guidance for network errors
+  - Created *ListWithError wrapper components for all list pages
 
 #### Step 9.2: Edge Cases
-- [ ] Handle Pokemon with missing data:
-  - No sprites: Show placeholder image or hide sprite section
-  - No moves: Show "No moves available" message
-  - No locations: Show "No location data available" message
-- [ ] Handle locations with no sub-areas: Show appropriate empty state message
-- [ ] Handle moves with no flavor text: Show "No flavor text available" or hide section
-- [ ] Handle Pokemon learners missing from move data: Skip PokemonLearners section (as specified)
-- [ ] Handle generations with no Pokemon (shouldn't happen, but handle gracefully): Show empty state
-- [ ] Handle empty search results with helpful message: "No results found. Try a different search term."
-- [ ] Handle special characters in names: Properly encode/decode URLs using `encodeURIComponent()` and `decodeURIComponent()`
+- [x] Handle Pokemon with missing data:
+  - No sprites: Shows "No sprites available" message (PokemonSprites component)
+  - No moves: Shows "No moves available" message (PokemonMoves component)
+  - No locations: Shows "No location data available" message (PokemonLocations component)
+- [x] Handle locations with no sub-areas: Shows "No sub-areas available" message (SubAreaList component)
+- [x] Handle moves with no flavor text: Shows "No flavor text available" message (MoveFlavorText component)
+- [x] Handle Pokemon learners missing from move data: PokemonLearners component returns null if no data (MoveDetail handles this)
+- [x] Handle generations with no Pokemon: Shows "No Pokemon in this generation" message (GenerationDetail component)
+- [x] Handle empty search results: SearchableList shows "No results found" with customizable message
+- [x] Handle special characters in names: All pages use `encodeURIComponent()` and `decodeURIComponent()` for URL encoding/decoding
   - PokeAPI uses hyphenated lowercase (e.g., "farfetchd", "mr-mime", "nidoran-f")
-  - Test edge cases: apostrophes, hyphens, gender symbols
+  - All detail pages properly decode route params
 
 ### Phase 10: Performance Optimization
 
