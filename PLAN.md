@@ -151,17 +151,17 @@ Build a comprehensive Pokedex application using Next.js 16 App Router and PokeAP
 ### Phase 5: Detail Page Components
 
 #### Step 5.1: Pokemon Detail Components
-- [ ] Create `components/pokemon/PokemonSprites.tsx`:
+- [x] Create `components/pokemon/PokemonSprites.tsx`:
   - Display normal and shiny sprites side by side
   - Use Next.js Image component for optimization
   - Label each sprite type
 
-- [ ] Create `components/pokemon/PokemonStats.tsx`:
+- [x] Create `components/pokemon/PokemonStats.tsx`:
   - Display all 6 base stats (HP, Attack, Defense, Sp. Atk, Sp. Def, Speed)
   - Visual stat bars or list format
   - Accessible stat names
 
-- [ ] Create `components/pokemon/PokemonMoves.tsx`:
+- [x] Create `components/pokemon/PokemonMoves.tsx`:
   - Display Pokemon moves organized by category:
     - Level-up moves (show level learned)
     - TM/HM moves
@@ -171,20 +171,20 @@ Build a comprehensive Pokedex application using Next.js 16 App Router and PokeAP
   - Each move should be clickable and link to `/moves/[name]`
   - Show move learning method/level where applicable
 
-- [ ] Create `components/pokemon/PokemonLocations.tsx`:
+- [x] Create `components/pokemon/PokemonLocations.tsx`:
   - Display main locations where Pokemon can be found (not sub-areas)
   - Use `extractMainLocations()` utility to get deduplicated main location names
   - Each location should be clickable and link to `/locations/[name]`
   - Handle case where Pokemon has no locations
 
-- [ ] Create `components/pokemon/PokemonDetail.tsx`:
+- [x] Create `components/pokemon/PokemonDetail.tsx`:
   - Main component orchestrating Pokemon detail display
   - Integrate PokemonSprites, PokemonStats, PokemonMoves, and PokemonLocations
   - Handle loading and error states
   - Fetch Pokemon data, location areas (for main location extraction), and move details
 
 #### Step 5.2: Location Detail Components
-- [ ] Create `components/locations/SubAreaList.tsx`:
+- [x] Create `components/locations/SubAreaList.tsx`:
   - Display list of sub-areas for a location
   - For each sub-area, display Pokemon that can be found there
   - Group Pokemon encounters by encounter method using `groupEncountersByMethod()` utility:
@@ -196,32 +196,32 @@ Build a comprehensive Pokedex application using Next.js 16 App Router and PokeAP
   - Show encounter method labels/sections for clarity
   - Handle empty states (no Pokemon found)
 
-- [ ] Create `components/locations/LocationDetail.tsx`:
+- [x] Create `components/locations/LocationDetail.tsx`:
   - Display location name and region
   - Integrate SubAreaList component
   - Handle loading and error states
 
 #### Step 5.3: Move Detail Components
-- [ ] Create `components/moves/PokemonLearners.tsx`:
+- [x] Create `components/moves/PokemonLearners.tsx`:
   - Display list of Pokemon that can learn the move
   - Clickable Pokemon links to detail pages
   - Responsive grid layout
 
-- [ ] Create `components/moves/MoveFlavorText.tsx`:
+- [x] Create `components/moves/MoveFlavorText.tsx`:
   - Display flavor text entries using `groupFlavorTextByVersion()` utility
   - Show one entry per version group (e.g., one for "red-blue", one for "yellow", one for "sword-shield")
   - Format version group names nicely (e.g., "Red/Blue", "Yellow", "Sword/Shield")
   - Display in a readable list or card format
   - Handle cases where move has no flavor text
 
-- [ ] Create `components/moves/MoveDetail.tsx`:
+- [x] Create `components/moves/MoveDetail.tsx`:
   - Display move name, accuracy, PP, power
   - Integrate MoveFlavorText and PokemonLearners components
   - For PokemonLearners: Only display if `learned_by_pokemon` data is available in the API response (skip section if missing)
   - Handle loading and error states
 
 #### Step 5.4: Generation Detail Component
-- [ ] Create `components/generations/GenerationDetail.tsx`:
+- [x] Create `components/generations/GenerationDetail.tsx`:
   - Display generation name and primary region
   - Display list of Pokemon in that generation
   - Clickable Pokemon links to detail pages
