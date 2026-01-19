@@ -231,19 +231,19 @@ Build a comprehensive Pokedex application using Next.js 16 App Router and PokeAP
 ### Phase 6: Page Routes - List Pages
 
 #### Step 6.1: Root Layout Update
-- [ ] Update `app/layout.tsx`:
+- [x] Update `app/layout.tsx`:
   - Import TabNavigation component
   - Add TabNavigation to layout (above children)
   - Update metadata (title, description for Pokedex)
 
 #### Step 6.2: Home Page
-- [ ] Update `app/page.tsx`:
+- [x] Update `app/page.tsx`:
   - Server Component
   - Use `redirect('/pokemon')` from `next/navigation`
   - This handles automatic Pokemon tab selection on app load
 
 #### Step 6.3: Pokemon List Page
-- [ ] Create `app/pokemon/page.tsx`:
+- [x] Create `app/pokemon/page.tsx`:
   - Server Component
   - Fetch all Pokemon using `getAllPokemon()` from API utilities
   - Pass Pokemon data to SearchableList component
@@ -252,7 +252,7 @@ Build a comprehensive Pokedex application using Next.js 16 App Router and PokeAP
   - Set appropriate metadata
 
 #### Step 6.4: Locations List Page
-- [ ] Create `app/locations/page.tsx`:
+- [x] Create `app/locations/page.tsx`:
   - Server Component
   - Fetch all locations using `getAllLocations()` from API utilities
   - Pass location data to SearchableList component
@@ -261,7 +261,7 @@ Build a comprehensive Pokedex application using Next.js 16 App Router and PokeAP
   - Set appropriate metadata
 
 #### Step 6.5: Moves List Page
-- [ ] Create `app/moves/page.tsx`:
+- [x] Create `app/moves/page.tsx`:
   - Server Component
   - Fetch all moves using `getAllMoves()` from API utilities
   - Pass move data to SearchableList component
@@ -270,7 +270,7 @@ Build a comprehensive Pokedex application using Next.js 16 App Router and PokeAP
   - Set appropriate metadata
 
 #### Step 6.6: Generations List Page
-- [ ] Create `app/generations/page.tsx`:
+- [x] Create `app/generations/page.tsx`:
   - Server Component
   - Fetch all generations using `getAllGenerations()` from API utilities
   - Pass generation data to SearchableList component
