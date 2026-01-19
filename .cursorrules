@@ -1,0 +1,102 @@
+# Cursor AI Ruleset for Next.js Pokedex Project
+
+## Project Overview
+This is a Next.js 16.1.3 application using:
+- React 19.2.3
+- TypeScript
+- Tailwind CSS v4
+- App Router (app directory structure)
+
+## Code Style & Best Practices
+
+### Next.js App Router
+- Use the App Router conventions (`app/` directory)
+- Prefer Server Components by default unless client-side interactivity is required
+- Use `"use client"` directive only when necessary (state, effects, event handlers, browser APIs)
+- Utilize Next.js Image component for all images with proper width/height or fill prop
+- Use route handlers in `app/api/` for API endpoints
+- Leverage Next.js built-in optimizations (automatic code splitting, image optimization, font optimization)
+
+### TypeScript
+- Use strict TypeScript types - avoid `any` when possible
+- Define proper interfaces/types for all data structures
+- Use TypeScript's type inference where appropriate
+- Export types/interfaces when they're used across multiple files
+- Prefer `interface` for object shapes, `type` for unions/intersections
+
+### React Best Practices
+- Use functional components exclusively
+- Prefer named exports for components
+- Use descriptive component and function names
+- Keep components focused and single-purpose
+- Extract reusable logic into custom hooks when appropriate
+- Use React.memo() sparingly - only when performance profiling indicates it's needed
+
+### Styling with Tailwind CSS
+- Use Tailwind utility classes exclusively - avoid custom CSS unless absolutely necessary
+- Use Tailwind's dark mode variants (e.g., `dark:bg-black`) for dark mode support
+- Follow mobile-first responsive design patterns
+- Use Tailwind's spacing, typography, and color scales
+- Group related Tailwind classes logically (layout, spacing, typography, colors, etc.)
+
+### File Organization
+- Keep components in appropriate directories within `app/`
+- Use descriptive file names (e.g., `PokemonCard.tsx` not `Card.tsx`)
+- Co-locate related files (components, types, utils) when they're tightly coupled
+- Use index files sparingly - prefer explicit imports
+
+### Code Quality
+- Write self-documenting code with clear variable and function names
+- Add comments only when necessary to explain "why", not "what"
+- Keep functions small and focused
+- Avoid deeply nested conditionals - use early returns
+- Handle errors appropriately with try-catch or error boundaries
+- Validate user inputs and API responses
+
+### Performance
+- Use Next.js Image optimization for all images
+- Implement proper loading states and error handling
+- Use dynamic imports for heavy components when appropriate
+- Optimize API calls - use caching where appropriate
+- Avoid unnecessary re-renders
+
+### API & Data Fetching
+- Use Server Components for data fetching when possible
+- Use `fetch` with Next.js caching strategies
+- Implement proper loading and error states
+- Type API responses appropriately
+- Handle edge cases and error scenarios
+
+### Accessibility
+- Use semantic HTML elements
+- Provide proper alt text for images
+- Ensure proper keyboard navigation
+- Use ARIA attributes when necessary
+- Maintain proper heading hierarchy
+- Ensure sufficient color contrast
+
+### Git & Version Control
+- Write clear, descriptive commit messages
+- Keep commits focused and atomic
+- Don't commit build artifacts or dependencies
+
+### Testing Considerations
+- Structure code to be testable
+- Keep components and functions pure when possible
+- Avoid side effects in render functions
+
+## Anti-Patterns to Avoid
+- Don't use `useEffect` for data fetching in Server Components
+- Don't mix Server and Client Component patterns unnecessarily
+- Don't use inline styles when Tailwind classes can achieve the same result
+- Don't create overly complex nested component hierarchies
+- Don't ignore TypeScript errors - fix them properly
+- Don't commit console.log statements
+- Don't use `any` type without a good reason
+
+## When Making Changes
+- Always check for linting errors before completing tasks
+- Ensure the code builds successfully (`npm run build`)
+- Test changes in the browser when UI-related
+- Preserve existing functionality when refactoring
+- Update types/interfaces when changing data structures
