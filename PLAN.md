@@ -33,47 +33,47 @@ Build a comprehensive Pokedex application using Next.js 16 App Router and PokeAP
 ### Phase 2: PokeAPI Integration Layer
 
 #### Step 2.1: Create API Utility Functions
-- [ ] Create `lib/api/pokemon.ts`:
+- [x] Create `lib/api/pokemon.ts`:
   - `getAllPokemon()` - Fetch all Pokemon (limit=1300)
   - `getPokemonByName(name: string)` - Fetch Pokemon detail by name
   - `getPokemonSpecies(name: string)` - Fetch Pokemon species data
   - Include proper error handling and TypeScript types
   - Use Next.js fetch with appropriate caching (revalidate: 86400 for static data)
 
-- [ ] Create `lib/api/locations.ts`:
+- [x] Create `lib/api/locations.ts`:
   - `getAllLocations()` - Fetch all locations
   - `getLocationByName(name: string)` - Fetch location detail by name
   - `getLocationArea(id: number)` - Fetch location area with Pokemon encounters
   - Include proper error handling and TypeScript types
 
-- [ ] Create `lib/api/moves.ts`:
+- [x] Create `lib/api/moves.ts`:
   - `getAllMoves()` - Fetch all moves
   - `getMoveByName(name: string)` - Fetch move detail by name
   - Include proper error handling and TypeScript types
 
-- [ ] Create `lib/api/generations.ts`:
+- [x] Create `lib/api/generations.ts`:
   - `getAllGenerations()` - Fetch all generations
   - `getGenerationByName(name: string)` - Fetch generation detail by name
   - Include proper error handling and TypeScript types
 
 #### Step 2.2: Create Helper Utilities
-- [ ] Create `lib/utils/search.ts`:
+- [x] Create `lib/utils/search.ts`:
   - `filterBySearch<T>(items: T[], searchTerm: string, getSearchableText: (item: T) => string)` - Generic search filter function
   - Use case-insensitive matching
 
-- [ ] Create `lib/utils/pokemon.ts`:
+- [x] Create `lib/utils/pokemon.ts`:
   - `extractMainLocations(pokemon: Pokemon)` - Extract and deduplicate main location names from Pokemon's location_area data
   - Function should: fetch location areas from Pokemon's location_area_encounters URLs, extract main location from each location_area.location.url, deduplicate by location name, return unique location names/IDs
 
-- [ ] Create `lib/utils/generations.ts`:
+- [x] Create `lib/utils/generations.ts`:
   - `formatGenerationName(name: string): string` - Format generation name from API format (e.g., "generation-i") to display format (e.g., "Generation I")
   - Use Roman numeral mapping: i → I, ii → II, iii → III, iv → IV, v → V, vi → VI, vii → VII, viii → VIII, ix → IX
 
-- [ ] Create `lib/utils/encounters.ts`:
+- [x] Create `lib/utils/encounters.ts`:
   - `groupEncountersByMethod(encounters: Encounter[])` - Group Pokemon encounters by encounter method (walking, surfing, fishing, etc.)
   - Return organized structure for display
 
-- [ ] Create `lib/utils/flavor-text.ts`:
+- [x] Create `lib/utils/flavor-text.ts`:
   - `groupFlavorTextByVersion(entries: FlavorTextEntry[])` - Group flavor text entries by version group (e.g., "red-blue", "yellow", "sword-shield")
   - Return one entry per version group for display
 
