@@ -7,7 +7,7 @@ export default function GenerationNotFound() {
         Generation Not Found
       </h1>
       <p className="text-gray-600 dark:text-gray-400 mb-6">
-        The generation you're looking for doesn't exist. Check the spelling or try searching for a different generation.
+        The generation you&apos;re looking for doesn&apos;t exist. Check the spelling or try searching for a different generation.
       </p>
       <Link
         href="/generations"

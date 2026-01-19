@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { LocationArea, PokemonEncounter } from '@/lib/types/locations';
+import { LocationArea } from '@/lib/types/locations';
 import { groupEncountersByMethod } from '@/lib/utils/encounters';
 
 interface SubAreaListProps {

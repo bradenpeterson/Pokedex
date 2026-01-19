@@ -7,7 +7,7 @@ export default function LocationNotFound() {
         Location Not Found
       </h1>
       <p className="text-gray-600 dark:text-gray-400 mb-6">
-        The location you're looking for doesn't exist. Check the spelling or try searching for a different location.
+        The location you&apos;re looking for doesn&apos;t exist. Check the spelling or try searching for a different location.
       </p>
       <Link
         href="/locations"

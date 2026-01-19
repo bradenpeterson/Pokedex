@@ -32,7 +32,7 @@ export async function extractMainLocations(
       try {
         const areaData: LocationArea = await getLocationAreaByUrl(location_area.url);
         return areaData.location;
-      } catch (error) {
+      } catch {
         // If fetching fails, return null
         return null;
       }
@@ -50,7 +50,7 @@ export async function extractMainLocations(
     });
 
     return Array.from(uniqueLocationsMap.values());
-  } catch (error) {
+  } catch {
     // Return empty array on error
     return [];
   }

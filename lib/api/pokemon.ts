@@ -85,7 +85,7 @@ export async function getPokemonByName(name: string): Promise<PokemonDetail> {
  * @param name - Pokemon species name
  * @returns Promise with Pokemon species data
  */
-export async function getPokemonSpecies(name: string): Promise<any> {
+export async function getPokemonSpecies(name: string): Promise<Record<string, unknown>> {
   try {
     const response = await fetch(`${POKEAPI_BASE_URL}/pokemon-species/${encodeURIComponent(name.toLowerCase())}`, {
       next: { revalidate: 3600 }, // Cache for 1 hour

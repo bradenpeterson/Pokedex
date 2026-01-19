@@ -34,7 +34,7 @@ export function MoveFlavorText({ flavorTextEntries }: MoveFlavorTextProps) {
               {formatVersionGroupName(entry.version_group.name)}
             </p>
             <p className="text-gray-700 dark:text-gray-300 italic">
-              "{entry.flavor_text}"
+              &ldquo;{entry.flavor_text}&rdquo;
             </p>
           </div>
         ))}
