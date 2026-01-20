@@ -11,7 +11,7 @@ export default function MoveNotFound() {
       </p>
       <Link
         href="/moves"
-        className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        className="inline-block px-6 py-3 bg-gradient-to-r from-yellow-600 to-orange-600 text-white rounded-lg hover:from-yellow-700 hover:to-orange-700 transition-all shadow-md font-semibold"
       >
         Back to Moves List
       </Link>

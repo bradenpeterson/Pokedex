@@ -23,37 +23,37 @@ export function MoveDetail({ move }: MoveDetailProps) {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-        <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+      <div className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 border-2 border-yellow-200 dark:border-yellow-900 shadow-lg">
+        <h1 className="text-3xl font-bold mb-4 bg-gradient-to-r from-yellow-600 to-orange-600 dark:from-yellow-400 dark:to-orange-400 bg-clip-text text-transparent">
           {formattedName}
         </h1>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <div>
-            <p className="text-sm text-gray-500 dark:text-gray-400">Type</p>
-            <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+            <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Type</p>
+            <p className="text-lg font-bold text-yellow-600 dark:text-yellow-400">
               {formatTypeName(move.type.name)}
             </p>
           </div>
           {move.power !== null && (
             <div>
-              <p className="text-sm text-gray-500 dark:text-gray-400">Power</p>
-              <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+              <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Power</p>
+              <p className="text-lg font-bold text-orange-600 dark:text-orange-400">
                 {move.power}
               </p>
             </div>
           )}
           {move.accuracy !== null && (
             <div>
-              <p className="text-sm text-gray-500 dark:text-gray-400">Accuracy</p>
-              <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+              <p className="text-sm font-medium text-gray-600 dark:text-gray-400">Accuracy</p>
+              <p className="text-lg font-bold text-blue-600 dark:text-blue-400">
                 {move.accuracy}%
               </p>
             </div>
           )}
           {move.pp !== null && (
             <div>
-              <p className="text-sm text-gray-500 dark:text-gray-400">PP</p>
-              <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+              <p className="text-sm font-medium text-gray-600 dark:text-gray-400">PP</p>
+              <p className="text-lg font-bold text-green-600 dark:text-green-400">
                 {move.pp}
               </p>
             </div>

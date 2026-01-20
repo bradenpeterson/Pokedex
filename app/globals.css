@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Pokemon-themed colors */
+  --pokemon-red: #DC2626; /* Pokemon Red */
+  --pokemon-blue: #3B4CCA; /* Pokemon Blue */
+  --pokemon-yellow: #FFCC00; /* Pikachu Yellow */
+  --pokemon-green: #4ADE80; /* Grass type */
+  --pokemon-orange: #FB923C; /* Fire type */
 }
 
 @theme inline {
@@ -63,7 +69,7 @@ html {
 
 /* Focus visible styles for accessibility */
 *:focus-visible {
-  outline: 2px solid #3b82f6; /* blue-500 */
+  outline: 2px solid var(--pokemon-blue);
   outline-offset: 2px;
 }
 

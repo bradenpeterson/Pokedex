@@ -18,8 +18,8 @@ export function PokemonSprites({ sprites, pokemonName }: PokemonSpritesProps) {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-      <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+    <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border-2 border-gray-200 dark:border-gray-700 shadow-md">
+      <h2 className="text-xl font-bold mb-4 text-red-600 dark:text-red-400">
         Sprites
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

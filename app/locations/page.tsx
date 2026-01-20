@@ -20,7 +20,9 @@ export default async function LocationsListPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100">Locations</h1>
+      <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
+        Locations
+      </h1>
       <LocationListWithError initialLocations={locations} initialError={error} />
     </div>
   );

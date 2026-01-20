@@ -20,7 +20,9 @@ export default async function GenerationsListPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100">Generations</h1>
+      <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-600 to-emerald-600 dark:from-green-400 dark:to-emerald-400 bg-clip-text text-transparent">
+        Generations
+      </h1>
       <GenerationListWithError initialGenerations={generations} initialError={error} />
     </div>
   );

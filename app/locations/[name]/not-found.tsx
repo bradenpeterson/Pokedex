@@ -11,7 +11,7 @@ export default function LocationNotFound() {
       </p>
       <Link
         href="/locations"
-        className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+        className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-md font-semibold"
       >
         Back to Locations List
       </Link>

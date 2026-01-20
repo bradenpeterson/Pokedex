@@ -20,7 +20,9 @@ export default async function MovesListPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100">Moves</h1>
+      <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-yellow-600 to-orange-600 dark:from-yellow-400 dark:to-orange-400 bg-clip-text text-transparent">
+        Moves
+      </h1>
       <MoveListWithError initialMoves={moves} initialError={error} />
     </div>
   );

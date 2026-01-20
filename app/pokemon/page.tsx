@@ -20,7 +20,9 @@ export default async function PokemonListPage() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100">Pokemon</h1>
+      <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-red-600 to-orange-600 dark:from-red-400 dark:to-orange-400 bg-clip-text text-transparent">
+        Pokemon
+      </h1>
       <PokemonListWithError initialPokemon={pokemon} initialError={error} />
     </div>
   );

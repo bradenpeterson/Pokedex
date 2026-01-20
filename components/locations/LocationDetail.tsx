@@ -27,12 +27,12 @@ export function LocationDetail({ location, locationAreas }: LocationDetailProps)
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-        <h1 className="text-3xl font-bold mb-2 text-gray-900 dark:text-gray-100">
+      <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-gray-800 dark:to-gray-700 rounded-xl p-6 border-2 border-blue-200 dark:border-blue-900 shadow-lg">
+        <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400 bg-clip-text text-transparent">
           {formattedName}
         </h1>
         {regionName && (
-          <p className="text-lg text-gray-600 dark:text-gray-400">Region: {regionName}</p>
+          <p className="text-lg font-semibold text-gray-700 dark:text-gray-300">Region: <span className="text-blue-600 dark:text-blue-400">{regionName}</span></p>
         )}
       </div>
 

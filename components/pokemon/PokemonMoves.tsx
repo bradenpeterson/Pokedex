@@ -84,15 +84,15 @@ export function PokemonMoves({ moves }: PokemonMovesProps) {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-      <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+    <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border-2 border-gray-200 dark:border-gray-700 shadow-md">
+      <h2 className="text-xl font-bold mb-4 text-yellow-600 dark:text-yellow-400">
         Moves
       </h2>
       <div className="space-y-6">
         {/* Level-up Moves */}
         {categorized.levelUp.length > 0 && (
           <div>
-            <h3 className="text-lg font-medium mb-3 text-gray-800 dark:text-gray-200">
+            <h3 className="text-lg font-bold mb-3 text-red-600 dark:text-red-400">
               Level-up Moves
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -100,12 +100,12 @@ export function PokemonMoves({ moves }: PokemonMovesProps) {
                 <Link
                   key={move}
                   href={`/moves/${encodeURIComponent(move)}`}
-                  className="flex items-center justify-between p-2 bg-gray-50 dark:bg-gray-900 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  className="flex items-center justify-between p-2 bg-gray-50 dark:bg-gray-900 rounded-lg border border-transparent hover:border-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 transition-all"
                 >
-                  <span className="text-sm text-gray-900 dark:text-gray-100">
+                  <span className="text-sm font-medium text-gray-900 dark:text-gray-100 hover:text-yellow-600 dark:hover:text-yellow-400 transition-colors">
                     {formatMoveName(move)}
                   </span>
-                  <span className="text-xs text-gray-500 dark:text-gray-400 ml-2">
+                  <span className="text-xs font-semibold text-yellow-600 dark:text-yellow-400 ml-2">
                     Lv. {level}
                   </span>
                 </Link>
@@ -117,7 +117,7 @@ export function PokemonMoves({ moves }: PokemonMovesProps) {
         {/* TM/HM Moves */}
         {categorized.tmHm.length > 0 && (
           <div>
-            <h3 className="text-lg font-medium mb-3 text-gray-800 dark:text-gray-200">
+            <h3 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">
               TM/HM Moves
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -125,7 +125,7 @@ export function PokemonMoves({ moves }: PokemonMovesProps) {
                 <Link
                   key={move}
                   href={`/moves/${encodeURIComponent(move)}`}
-                  className="p-2 bg-gray-50 dark:bg-gray-900 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-sm text-gray-900 dark:text-gray-100"
+                  className="p-2 bg-gray-50 dark:bg-gray-900 rounded-lg border border-transparent hover:border-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 transition-all text-sm font-medium text-gray-900 dark:text-gray-100 hover:text-yellow-600 dark:hover:text-yellow-400"
                 >
                   {formatMoveName(move)}
                 </Link>
@@ -137,7 +137,7 @@ export function PokemonMoves({ moves }: PokemonMovesProps) {
         {/* Egg Moves */}
         {categorized.egg.length > 0 && (
           <div>
-            <h3 className="text-lg font-medium mb-3 text-gray-800 dark:text-gray-200">
+            <h3 className="text-lg font-bold mb-3 text-green-600 dark:text-green-400">
               Egg Moves
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -145,7 +145,7 @@ export function PokemonMoves({ moves }: PokemonMovesProps) {
                 <Link
                   key={move}
                   href={`/moves/${encodeURIComponent(move)}`}
-                  className="p-2 bg-gray-50 dark:bg-gray-900 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-sm text-gray-900 dark:text-gray-100"
+                  className="p-2 bg-gray-50 dark:bg-gray-900 rounded-lg border border-transparent hover:border-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 transition-all text-sm font-medium text-gray-900 dark:text-gray-100 hover:text-yellow-600 dark:hover:text-yellow-400"
                 >
                   {formatMoveName(move)}
                 </Link>
@@ -157,7 +157,7 @@ export function PokemonMoves({ moves }: PokemonMovesProps) {
         {/* Tutor Moves */}
         {categorized.tutor.length > 0 && (
           <div>
-            <h3 className="text-lg font-medium mb-3 text-gray-800 dark:text-gray-200">
+            <h3 className="text-lg font-bold mb-3 text-orange-600 dark:text-orange-400">
               Tutor Moves
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -165,7 +165,7 @@ export function PokemonMoves({ moves }: PokemonMovesProps) {
                 <Link
                   key={move}
                   href={`/moves/${encodeURIComponent(move)}`}
-                  className="p-2 bg-gray-50 dark:bg-gray-900 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-sm text-gray-900 dark:text-gray-100"
+                  className="p-2 bg-gray-50 dark:bg-gray-900 rounded-lg border border-transparent hover:border-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-900/20 transition-all text-sm font-medium text-gray-900 dark:text-gray-100 hover:text-yellow-600 dark:hover:text-yellow-400"
                 >
                   {formatMoveName(move)}
                 </Link>

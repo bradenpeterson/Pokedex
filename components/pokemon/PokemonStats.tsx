@@ -44,8 +44,8 @@ export function PokemonStats({ stats }: PokemonStatsProps) {
   ];
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
-      <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+    <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border-2 border-gray-200 dark:border-gray-700 shadow-md">
+      <h2 className="text-xl font-bold mb-4 text-red-600 dark:text-red-400">
         Base Stats
       </h2>
       <div className="space-y-4">
@@ -65,7 +65,7 @@ export function PokemonStats({ stats }: PokemonStatsProps) {
               </div>
               <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
                 <div
-                  className="bg-blue-600 dark:bg-blue-500 h-2.5 rounded-full transition-all duration-300"
+                  className="bg-gradient-to-r from-red-500 to-orange-500 dark:from-red-600 dark:to-orange-600 h-2.5 rounded-full transition-all duration-300"
                   style={{ width: `${percentage}%` }}
                   role="progressbar"
                   aria-valuenow={value}
