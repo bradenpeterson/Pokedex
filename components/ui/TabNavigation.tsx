@@ -29,7 +29,7 @@ export function TabNavigation() {
           {/* Home Button - Just the Logo */}
           <Link
             href="/pokemon"
-            className="flex items-end justify-center pb-1 hover:opacity-80 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 rounded self-end"
+            className="flex items-end justify-center pb-1 hover:opacity-80 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 rounded self-end mr-6 sm:mr-8"
             aria-label="Home - Pokemon List"
           >
             <div className="relative w-52 h-24 flex-shrink-0">
