@@ -1,20 +1,10 @@
 import { MoveDetail as MoveDetailType } from '@/lib/types/moves';
+import { formatMoveName, formatTypeName } from '@/lib/utils/formatting';
 import { MoveFlavorText } from './MoveFlavorText';
 import { PokemonLearners } from './PokemonLearners';
 
 interface MoveDetailProps {
   move: MoveDetailType;
-}
-
-function formatMoveName(name: string): string {
-  return name
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
-
-function formatTypeName(name: string): string {
-  return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
 export function MoveDetail({ move }: MoveDetailProps) {

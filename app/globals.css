@@ -34,6 +34,7 @@ body {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 130px; /* Account for sticky navigation bar */
 }
 
 /* Custom scrollbar for webkit browsers */

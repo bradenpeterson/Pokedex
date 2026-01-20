@@ -1,4 +1,5 @@
 import { PokemonDetail as PokemonDetailType } from '@/lib/types/pokemon';
+import { formatPokemonName, formatTypeName } from '@/lib/utils/formatting';
 import { PokemonSprites } from './PokemonSprites';
 import { PokemonStats } from './PokemonStats';
 import { PokemonMoves } from './PokemonMoves';
@@ -8,15 +9,8 @@ interface PokemonDetailProps {
   pokemon: PokemonDetailType;
 }
 
-function formatPokemonName(name: string): string {
-  return name
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
-
 function formatTypes(types: Array<{ type: { name: string } }>): string {
-  return types.map((t) => t.type.name.charAt(0).toUpperCase() + t.type.name.slice(1)).join(', ');
+  return types.map((t) => formatTypeName(t.type.name)).join(', ');
 }
 
 export function PokemonDetail({ pokemon }: PokemonDetailProps) {

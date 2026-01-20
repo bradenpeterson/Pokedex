@@ -1,15 +1,9 @@
 import Link from 'next/link';
 import { NamedAPIResource } from '@/lib/types/api';
+import { formatPokemonName } from '@/lib/utils/formatting';
 
 interface PokemonLearnersProps {
   pokemon: NamedAPIResource[];
-}
-
-function formatPokemonName(name: string): string {
-  return name
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
 }
 
 export function PokemonLearners({ pokemon }: PokemonLearnersProps) {

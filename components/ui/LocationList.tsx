@@ -14,6 +14,7 @@ export function LocationList({ items }: LocationListProps) {
       items={items}
       renderItem={(location) => <LocationCard location={location} />}
       getSearchText={(location) => location.name}
+      getItemKey={(location) => location.name}
       placeholder="Search locations..."
       emptyMessage="No locations found. Try a different search term."
     />

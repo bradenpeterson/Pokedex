@@ -1,15 +1,13 @@
 import Link from 'next/link';
 import { MoveListItem } from '@/lib/types/moves';
+import { formatMoveName } from '@/lib/utils/formatting';
 
 interface MoveCardProps {
   move: MoveListItem;
 }
 
 export function MoveCard({ move }: MoveCardProps) {
-  const formattedName = move.name
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
+  const formattedName = formatMoveName(move.name);
 
   // Extract move ID from URL to potentially get type later
   const moveId = move.url.match(/\/move\/(\d+)\//)?.[1];

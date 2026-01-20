@@ -14,6 +14,7 @@ export function GenerationList({ items }: GenerationListProps) {
       items={items}
       renderItem={(generation) => <GenerationCard generation={generation} />}
       getSearchText={(generation) => generation.name}
+      getItemKey={(generation) => generation.name}
       placeholder="Search generations..."
       emptyMessage="No generations found. Try a different search term."
     />

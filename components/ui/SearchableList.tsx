@@ -7,6 +7,7 @@ interface SearchableListProps<T> {
   items: T[];
   renderItem: (item: T) => React.ReactNode;
   getSearchText: (item: T) => string;
+  getItemKey?: (item: T) => string | number;
   placeholder?: string;
   className?: string;
   gridClassName?: string;
@@ -18,6 +19,7 @@ export function SearchableList<T>({
   items,
   renderItem,
   getSearchText,
+  getItemKey,
   placeholder = 'Search...',
   className = '',
   gridClassName = '',
@@ -103,9 +105,12 @@ export function SearchableList<T>({
           ${gridClassName}
         `}
       >
-        {filteredItems.map((item, index) => (
-          <div key={index} className="w-full h-full min-w-0">{renderItem(item)}</div>
-        ))}
+        {filteredItems.map((item, index) => {
+          const key = getItemKey ? getItemKey(item) : index;
+          return (
+            <div key={key} className="w-full h-full min-w-0">{renderItem(item)}</div>
+          );
+        })}
       </div>
     </div>
   );

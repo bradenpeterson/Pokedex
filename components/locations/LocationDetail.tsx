@@ -1,23 +1,10 @@
 import { LocationDetail as LocationDetailType, LocationArea } from '@/lib/types/locations';
+import { formatLocationName, formatRegionName } from '@/lib/utils/formatting';
 import { SubAreaList } from './SubAreaList';
 
 interface LocationDetailProps {
   location: LocationDetailType;
   locationAreas: LocationArea[];
-}
-
-function formatLocationName(name: string): string {
-  return name
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
-
-function formatRegionName(name: string): string {
-  return name
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
 }
 
 export function LocationDetail({ location, locationAreas }: LocationDetailProps) {

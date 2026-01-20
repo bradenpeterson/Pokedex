@@ -14,6 +14,7 @@ export function MoveList({ items }: MoveListProps) {
       items={items}
       renderItem={(move) => <MoveCard move={move} />}
       getSearchText={(move) => move.name}
+      getItemKey={(move) => move.name}
       placeholder="Search moves..."
       emptyMessage="No moves found. Try a different search term."
     />

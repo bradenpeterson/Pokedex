@@ -1,15 +1,13 @@
 import Link from 'next/link';
 import { LocationListItem } from '@/lib/types/locations';
+import { formatLocationName } from '@/lib/utils/formatting';
 
 interface LocationCardProps {
   location: LocationListItem;
 }
 
 export function LocationCard({ location }: LocationCardProps) {
-  const formattedName = location.name
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
+  const formattedName = formatLocationName(location.name);
 
   return (
     <Link

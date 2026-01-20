@@ -2,24 +2,11 @@
 
 import Link from 'next/link';
 import { LocationArea } from '@/lib/types/locations';
+import { formatPokemonName, formatMethodName } from '@/lib/utils/formatting';
 import { groupEncountersByMethod } from '@/lib/utils/encounters';
 
 interface SubAreaListProps {
   locationAreas: LocationArea[];
-}
-
-function formatPokemonName(name: string): string {
-  return name
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
-
-function formatMethodName(methodName: string): string {
-  return methodName
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
 }
 
 export function SubAreaList({ locationAreas }: SubAreaListProps) {

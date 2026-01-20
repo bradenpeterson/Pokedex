@@ -14,6 +14,7 @@ export function PokemonList({ items }: PokemonListProps) {
       items={items}
       renderItem={(pokemon) => <PokemonCard pokemon={pokemon} />}
       getSearchText={(pokemon) => pokemon.name}
+      getItemKey={(pokemon) => pokemon.name}
       placeholder="Search Pokemon..."
       emptyMessage="No Pokemon found. Try a different search term."
     />

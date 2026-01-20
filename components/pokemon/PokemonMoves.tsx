@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PokemonMove } from '@/lib/types/pokemon';
+import { formatMoveName } from '@/lib/utils/formatting';
 
 interface PokemonMovesProps {
   moves: PokemonMove[];
@@ -55,13 +56,6 @@ function categorizeMoves(moves: PokemonMove[]): CategorizedMoves {
   categorized.levelUp.sort((a, b) => a.level - b.level);
 
   return categorized;
-}
-
-function formatMoveName(name: string): string {
-  return name
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
 }
 
 export function PokemonMoves({ moves }: PokemonMovesProps) {

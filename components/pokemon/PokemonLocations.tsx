@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { PokemonDetail } from '@/lib/types/pokemon';
 import { NamedAPIResource } from '@/lib/types/api';
 import { extractMainLocations } from '@/lib/utils/pokemon';
+import { formatLocationName } from '@/lib/utils/formatting';
 
 interface PokemonLocationsProps {
   pokemon: PokemonDetail;
@@ -31,13 +32,6 @@ export function PokemonLocations({ pokemon }: PokemonLocationsProps) {
 
     fetchLocations();
   }, [pokemon]);
-
-  function formatLocationName(name: string): string {
-    return name
-      .split('-')
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-  }
 
   if (loading) {
     return (

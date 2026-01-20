@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { PokemonListItem } from '@/lib/types/pokemon';
+import { formatPokemonName } from '@/lib/utils/formatting';
 
 interface PokemonCardProps {
   pokemon: PokemonListItem;
@@ -12,10 +13,7 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
     ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`
     : null;
 
-  const formattedName = pokemon.name
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
+  const formattedName = formatPokemonName(pokemon.name);
 
   return (
     <Link

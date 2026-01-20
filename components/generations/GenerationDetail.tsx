@@ -1,23 +1,10 @@
 import Link from 'next/link';
 import { GenerationDetail as GenerationDetailType } from '@/lib/types/generations';
 import { formatGenerationName } from '@/lib/utils/generations';
+import { formatPokemonName, formatRegionName } from '@/lib/utils/formatting';
 
 interface GenerationDetailProps {
   generation: GenerationDetailType;
-}
-
-function formatRegionName(name: string): string {
-  return name
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
-
-function formatPokemonName(name: string): string {
-  return name
-    .split('-')
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
 }
 
 export function GenerationDetail({ generation }: GenerationDetailProps) {

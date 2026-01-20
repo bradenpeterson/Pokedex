@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 const tabs = [
   { name: 'Pokemon', href: '/pokemon', color: 'red' },
@@ -13,11 +14,33 @@ const tabs = [
 
 export function TabNavigation() {
   const pathname = usePathname();
-  const isHome = pathname === '/pokemon' || pathname === '/';
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Show nav bar when scrolling up or at the top
+      // Hide nav bar when scrolling down
+      if (currentScrollY < lastScrollY || currentScrollY < 10) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 10) {
+        setIsVisible(false);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   return (
     <nav
-      className="border-b-4 border-gray-200 dark:border-gray-800 bg-gradient-to-r from-red-100 via-blue-100 to-yellow-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 shadow-lg relative"
+      className={`sticky top-0 z-50 border-b-4 border-gray-200 dark:border-gray-800 bg-gradient-to-r from-red-100 via-blue-100 to-yellow-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 shadow-lg transition-transform duration-300 ease-in-out ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
+      }`}
       role="tablist"
       aria-label="Main navigation"
     >
