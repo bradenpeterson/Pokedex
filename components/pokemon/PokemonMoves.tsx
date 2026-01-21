@@ -86,7 +86,7 @@ export function PokemonMoves({ moves }: PokemonMovesProps) {
         {/* Level-up Moves */}
         {categorized.levelUp.length > 0 && (
           <div>
-            <h3 className="text-lg font-bold mb-3 text-red-600 dark:text-red-400">
+            <h3 className="text-lg font-bold mb-3 text-yellow-600 dark:text-yellow-400">
               Level-up Moves
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -111,7 +111,7 @@ export function PokemonMoves({ moves }: PokemonMovesProps) {
         {/* TM/HM Moves */}
         {categorized.tmHm.length > 0 && (
           <div>
-            <h3 className="text-lg font-bold mb-3 text-blue-600 dark:text-blue-400">
+            <h3 className="text-lg font-bold mb-3 text-yellow-600 dark:text-yellow-400">
               TM/HM Moves
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -131,7 +131,7 @@ export function PokemonMoves({ moves }: PokemonMovesProps) {
         {/* Egg Moves */}
         {categorized.egg.length > 0 && (
           <div>
-            <h3 className="text-lg font-bold mb-3 text-green-600 dark:text-green-400">
+            <h3 className="text-lg font-bold mb-3 text-yellow-600 dark:text-yellow-400">
               Egg Moves
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -151,7 +151,7 @@ export function PokemonMoves({ moves }: PokemonMovesProps) {
         {/* Tutor Moves */}
         {categorized.tutor.length > 0 && (
           <div>
-            <h3 className="text-lg font-bold mb-3 text-orange-600 dark:text-orange-400">
+            <h3 className="text-lg font-bold mb-3 text-yellow-600 dark:text-yellow-400">
               Tutor Moves
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
