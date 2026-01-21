@@ -26,13 +26,15 @@ export function PokemonSprites({ sprites, pokemonName }: PokemonSpritesProps) {
         {/* Normal Sprite */}
         {sprites.front_default && (
           <div className="flex flex-col items-center">
-            <div className="relative w-48 h-48 bg-gray-50 dark:bg-gray-900 rounded-lg mb-2 flex items-center justify-center">
+            <div className="relative w-64 h-64 bg-gray-50 dark:bg-gray-900 rounded-lg mb-2 flex items-center justify-center">
               <Image
                 src={sprites.front_default}
                 alt={`${pokemonName} normal sprite`}
                 fill
                 className="object-contain p-2"
-                sizes="192px"
+                style={{ imageRendering: 'pixelated' }}
+                sizes="256px"
+                unoptimized
               />
             </div>
             <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -44,13 +46,15 @@ export function PokemonSprites({ sprites, pokemonName }: PokemonSpritesProps) {
         {/* Shiny Sprite */}
         {sprites.front_shiny && (
           <div className="flex flex-col items-center">
-            <div className="relative w-48 h-48 bg-gray-50 dark:bg-gray-900 rounded-lg mb-2 flex items-center justify-center">
+            <div className="relative w-64 h-64 bg-gray-50 dark:bg-gray-900 rounded-lg mb-2 flex items-center justify-center">
               <Image
                 src={sprites.front_shiny}
                 alt={`${pokemonName} shiny sprite`}
                 fill
                 className="object-contain p-2"
-                sizes="192px"
+                style={{ imageRendering: 'pixelated' }}
+                sizes="256px"
+                unoptimized
               />
             </div>
             <p className="text-sm font-medium text-gray-700 dark:text-gray-300">

@@ -29,7 +29,9 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
                 alt={formattedName}
                 fill
                 className="object-contain group-hover:scale-110 transition-transform duration-200"
+                style={{ imageRendering: 'pixelated' }}
                 sizes="128px"
+                unoptimized
               />
             </div>
           ) : (
