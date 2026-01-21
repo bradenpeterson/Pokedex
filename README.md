@@ -146,14 +146,6 @@ Pokemon sprites are rendered with:
   - 4 columns on large screens
 - Touch-friendly targets (44x44px minimum)
 
-
-
-
-
-
-
-
-
 ## License
 
 This project is private and for educational purposes.
