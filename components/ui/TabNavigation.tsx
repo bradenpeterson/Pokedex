@@ -48,20 +48,20 @@ export function TabNavigation() {
       <div className="absolute inset-0 opacity-5 dark:opacity-10 bg-[radial-gradient(circle_at_1px_1px,_currentColor_1px,_transparent_0)] bg-[length:20px_20px]" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="flex items-end space-x-2 sm:space-x-4 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] min-h-[64px]">
+        <div className="flex items-end space-x-2 sm:space-x-4 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] min-h-[64px] py-2">
           {/* Home Button - Just the Logo */}
           <Link
             href="/pokemon"
-            className="flex items-end justify-center pb-1 hover:opacity-80 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 rounded self-end mr-6 sm:mr-8"
+            className="flex items-end justify-center pb-1 hover:opacity-80 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 rounded self-end mr-3 sm:mr-6 md:mr-8 flex-shrink-0"
             aria-label="Home - Pokemon List"
           >
-            <div className="relative w-52 h-24 flex-shrink-0">
+            <div className="relative w-32 h-14 sm:w-40 sm:h-18 md:w-52 md:h-24 flex-shrink-0">
               <Image
                 src="/pokemon-logo.svg"
                 alt="Pokemon Logo"
                 fill
                 className="object-contain"
-                sizes="192px"
+                sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, 192px"
                 priority
               />
             </div>
@@ -102,12 +102,12 @@ export function TabNavigation() {
                 key={tab.name}
                 href={tab.href}
                 className={`
-                  whitespace-nowrap py-3 px-4 border-b-4 font-bold text-sm
+                  whitespace-nowrap py-2 px-2 sm:py-3 sm:px-4 border-b-4 font-bold text-xs sm:text-sm
                   transition-all duration-300 rounded-t-xl relative
                   ${isActive ? colors.active : colors.inactive}
                   focus:outline-none focus:ring-2 ${focusColors[tab.color]} focus:ring-offset-2
                   min-w-[44px] min-h-[44px] flex items-center justify-center
-                  rounded-b-none
+                  rounded-b-none flex-shrink-0
                 `}
                 role="tab"
                 aria-selected={isActive}
