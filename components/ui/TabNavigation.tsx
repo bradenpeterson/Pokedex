@@ -47,21 +47,21 @@ export function TabNavigation() {
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-5 dark:opacity-10 bg-[radial-gradient(circle_at_1px_1px,_currentColor_1px,_transparent_0)] bg-[length:20px_20px]" />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="flex items-end space-x-2 sm:space-x-4 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] min-h-[64px] py-2">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 relative">
+        <div className="flex items-end space-x-1 sm:space-x-2 md:space-x-4 min-h-[64px] py-2">
           {/* Home Button - Just the Logo */}
           <Link
             href="/pokemon"
-            className="flex items-end justify-center pb-1 hover:opacity-80 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 rounded self-end mr-3 sm:mr-6 md:mr-8 flex-shrink-0"
+            className="flex items-end justify-center pb-1 hover:opacity-80 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 rounded self-end mr-1 sm:mr-3 md:mr-6 lg:mr-8 flex-shrink-0"
             aria-label="Home - Pokemon List"
           >
-            <div className="relative w-32 h-14 sm:w-40 sm:h-18 md:w-52 md:h-24 flex-shrink-0">
+            <div className="relative w-20 h-9 sm:w-32 sm:h-14 md:w-40 md:h-18 lg:w-52 lg:h-24 flex-shrink-0">
               <Image
                 src="/pokemon-logo.svg"
                 alt="Pokemon Logo"
                 fill
                 className="object-contain"
-                sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, 192px"
+                sizes="(max-width: 640px) 80px, (max-width: 768px) 128px, (max-width: 1024px) 160px, 192px"
                 priority
               />
             </div>
@@ -102,11 +102,11 @@ export function TabNavigation() {
                 key={tab.name}
                 href={tab.href}
                 className={`
-                  whitespace-nowrap py-2 px-2 sm:py-3 sm:px-4 border-b-4 font-bold text-xs sm:text-sm
+                  whitespace-nowrap py-1.5 px-1.5 sm:py-2 sm:px-2 md:py-3 md:px-4 border-b-4 font-bold text-[10px] sm:text-xs md:text-sm
                   transition-all duration-300 rounded-t-xl relative
                   ${isActive ? colors.active : colors.inactive}
                   focus:outline-none focus:ring-2 ${focusColors[tab.color]} focus:ring-offset-2
-                  min-w-[44px] min-h-[44px] flex items-center justify-center
+                  min-w-[36px] min-h-[36px] sm:min-w-[44px] sm:min-h-[44px] flex items-center justify-center
                   rounded-b-none flex-shrink-0
                 `}
                 role="tab"
