@@ -48,11 +48,11 @@ export function TabNavigation() {
       <div className="absolute inset-0 opacity-5 dark:opacity-10 bg-[radial-gradient(circle_at_1px_1px,_currentColor_1px,_transparent_0)] bg-[length:20px_20px]" />
       
       <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 relative">
-        <div className="flex items-end space-x-1.5 sm:space-x-2 md:space-x-4 min-h-[80px] sm:min-h-[64px] py-2.5 sm:py-2">
+        <div className="flex items-end space-x-1 sm:space-x-2 md:space-x-4 min-h-[80px] sm:min-h-[64px] py-2.5 sm:py-2">
           {/* Home Button - Just the Logo */}
           <Link
             href="/pokemon"
-            className="flex items-end justify-center pb-1 hover:opacity-80 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 rounded self-end mr-1.5 sm:mr-3 md:mr-6 lg:mr-8 flex-shrink-0"
+            className="flex items-end justify-center pb-1 hover:opacity-80 transition-opacity duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 rounded self-end mr-1 sm:mr-3 md:mr-6 lg:mr-8 flex-shrink-0"
             aria-label="Home - Pokemon List"
           >
             <div className="relative w-24 h-11 sm:w-32 sm:h-14 md:w-40 md:h-18 lg:w-52 lg:h-24 flex-shrink-0">
@@ -102,7 +102,7 @@ export function TabNavigation() {
                 key={tab.name}
                 href={tab.href}
                 className={`
-                  whitespace-nowrap py-2 px-2 sm:py-2 sm:px-2 md:py-3 md:px-4 border-b-[5px] sm:border-b-4 font-bold text-[12px] sm:text-xs md:text-sm
+                  whitespace-nowrap py-2 px-1.5 sm:py-2 sm:px-2 md:py-3 md:px-4 border-b-[5px] sm:border-b-4 font-bold text-[12px] sm:text-xs md:text-sm
                   transition-all duration-300 rounded-t-xl relative
                   ${isActive ? colors.active : colors.inactive}
                   focus:outline-none focus:ring-2 ${focusColors[tab.color]} focus:ring-offset-2
