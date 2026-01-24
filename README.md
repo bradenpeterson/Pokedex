@@ -1,6 +1,6 @@
 # Pokedex Application
 
-A comprehensive Pokedex web application built with Next.js 16, React 19, and TypeScript. This application provides detailed information about Pokemon, locations, moves, and generations from the Pokemon universe, powered by the [PokeAPI](https://pokeapi.co/).
+A Pokedex web application built with Next.js 16, React 19, and TypeScript. This application provides detailed information about Pokemon, locations, moves, and generations from the Pokemon universe, powered by the [PokeAPI](https://pokeapi.co/).
 
 ## Live Demo
 
